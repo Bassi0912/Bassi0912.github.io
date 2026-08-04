@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projets — Camille Dubois</title>
-<meta name="description" content="Sélection de projets web développés par Camille Dubois : applications, sites e-commerce et API.">
+<title>Projets — Bassirou Gueye</title>
+<meta name="description" content="Sélection de projets web développés par Bassirou Gueye : sites vitrine, portfolio et jeu interactif.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌘</text></svg>">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +17,7 @@
 <header class="editor-chrome">
   <div class="chrome-titlebar">
     <div class="chrome-dots"><span></span><span></span><span></span></div>
-    <span class="chrome-path">~/portfolio/camille-dubois</span>
+    <span class="chrome-path">~/portfolio/bassirou-gueye</span>
     <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -33,7 +33,7 @@
   <p class="breadcrumb">accueil<span class="sep">/</span><span class="current">projets</span></p>
   <p class="section-label">portfolio complet</p>
   <h2 style="font-family:var(--font-display); font-size:clamp(1.8rem,4.5vw,3rem); margin-top:8px;">Tous mes projets</h2>
-  <p class="section-sub">Une sélection de travaux personnels et professionnels — applications web, sites vitrine, API et outils internes.</p>
+  <p class="section-sub">Une sélection de projets personnels réalisés au fil de ma formation — sites vitrine, portfolio et jeu interactif.</p>
 </div>
 
 <section class="section section-tight">
@@ -41,100 +41,54 @@
 
     <div class="filters reveal">
       <button class="filter-btn is-active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="react">React</button>
-      <button class="filter-btn" data-filter="node">Node.js</button>
-      <button class="filter-btn" data-filter="nextjs">Next.js</button>
-      <button class="filter-btn" data-filter="api">API</button>
+      <button class="filter-btn" data-filter="front">Front-end</button>
+      <button class="filter-btn" data-filter="webflow">Webflow</button>
+      <button class="filter-btn" data-filter="data">Base de données</button>
     </div>
 
     <div class="grid-projects reveal-stagger">
 
-      <article class="project-card" data-tech="react">
+      <article class="project-card" data-tech="front">
         <div class="project-card-inner">
           <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#4adede,#1c3f4d);"></div>
-            <span class="thumb-tag">Web App</span>
-          </div>
-          <div class="project-body">
-            <h3>Nimbus — tableau de bord SaaS</h3>
-            <p>Dashboard analytique temps réel pour équipes produit : graphes interactifs, filtres avancés et export automatisé.</p>
-            <ul class="tech-list"><li>React</li><li>TypeScript</li><li>D3.js</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-tech="nextjs,react">
-        <div class="project-card-inner">
-          <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#ff6ad5,#3d1c3f);"></div>
-            <span class="thumb-tag">E-commerce</span>
-          </div>
-          <div class="project-body">
-            <h3>Atelier — boutique en ligne</h3>
-            <p>Boutique headless pour une marque d'artisanat, paiement Stripe, gestion de stock et back-office sur mesure.</p>
-            <ul class="tech-list"><li>Next.js</li><li>Node.js</li><li>Stripe</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-tech="node,api">
-        <div class="project-card-inner">
-          <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#ffb454,#4d3a1c);"></div>
-            <span class="thumb-tag">API</span>
-          </div>
-          <div class="project-body">
-            <h3>Latitude — API de géolocalisation</h3>
-            <p>API REST haute performance pour le calcul d'itinéraires, cache Redis et documentation interactive.</p>
-            <ul class="tech-list"><li>Node.js</li><li>PostgreSQL</li><li>Redis</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-tech="react,node">
-        <div class="project-card-inner">
-          <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#7ee787,#1c3d24);"></div>
-            <span class="thumb-tag">Productivité</span>
-          </div>
-          <div class="project-body">
-            <h3>Cadence — gestion de tâches en équipe</h3>
-            <p>Application collaborative de suivi de projet avec tableaux Kanban, notifications temps réel via WebSocket.</p>
-            <ul class="tech-list"><li>React</li><li>Node.js</li><li>Socket.io</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-tech="nextjs,api">
-        <div class="project-card-inner">
-          <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#4adede,#3d1c3f);"></div>
+            <div class="thumb-bg" style="background:linear-gradient(135deg,#c084fc,#3b0764);"></div>
             <span class="thumb-tag">Site vitrine</span>
           </div>
           <div class="project-body">
-            <h3>Studio Lumen — site agence</h3>
-            <p>Site vitrine animé pour une agence créative : transitions de page fluides et CMS headless pour le contenu.</p>
-            <ul class="tech-list"><li>Next.js</li><li>Sanity CMS</li><li>Framer Motion</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
+            <h3>Site de présentation d'un manga</h3>
+            <p>Création d'un site pour présenter un manga, avec des sections dédiées aux personnages et à l'intrigue.</p>
+            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links"><span>Septembre 2024</span></div>
           </div>
         </div>
       </article>
 
-      <article class="project-card" data-tech="node,api">
+      <article class="project-card" data-tech="webflow">
         <div class="project-card-inner">
           <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#ff6ad5,#1c3f4d);"></div>
-            <span class="thumb-tag">Outil interne</span>
+            <div class="thumb-bg" style="background:linear-gradient(135deg,#a78bfa,#1e1033);"></div>
+            <span class="thumb-tag">Portfolio</span>
           </div>
           <div class="project-body">
-            <h3>Flowbase — moteur de facturation</h3>
-            <p>Automatisation de la génération de factures et relances clients pour une PME, intégration comptable.</p>
-            <ul class="tech-list"><li>Node.js</li><li>Express</li><li>PostgreSQL</li></ul>
-            <div class="project-links"><a href="#">Démo ↗</a><a href="#">Code source ↗</a></div>
+            <h3>Portfolio Webflow</h3>
+            <p>Développement d'un portfolio interactif en ligne pour présenter mes projets et mon parcours.</p>
+            <ul class="tech-list"><li>Webflow</li></ul>
+            <div class="project-links"><span>Juin 2024</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-tech="front,data">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background:linear-gradient(135deg,#e0aaff,#4c1d95);"></div>
+            <span class="thumb-tag">Jeu web</span>
+          </div>
+          <div class="project-body">
+            <h3>Jeu DLE — Devinette de Personnages</h3>
+            <p>Création d'un jeu de devinettes interactif sur des personnages célèbres, avec base de données pour les indices et les réponses.</p>
+            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li></ul>
+            <div class="project-links"><span>Décembre 2024</span></div>
           </div>
         </div>
       </article>
@@ -145,11 +99,10 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© <span data-year></span> Camille Dubois — conçu &amp; développé à la main.</p>
+    <p>© <span data-year></span> Bassirou Gueye — conçu &amp; développé à la main.</p>
     <div class="footer-social">
-      <a href="https://github.com/votre-pseudo" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:camille.dubois@example.com">Email</a>
+      <a href="mailto:bassdu28@gmail.com">Email</a>
+      <a href="tel:+33761804256">Téléphone</a>
     </div>
   </div>
 </footer>

@@ -7,23 +7,25 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Couleurs */
-  --bg: #0b0e14;
-  --bg-elevated: #111623;
-  --bg-elevated-2: #161d2e;
-  --border: #1e2433;
-  --border-soft: #262e42;
-  --text: #e6e9f0;
-  --text-dim: #8891a7;
-  --text-faint: #545e75;
+  /* Couleurs — noir profond & violet */
+  --bg: #060309;
+  --bg-elevated: #0f0a19;
+  --bg-elevated-2: #150e24;
+  --border: #221735;
+  --border-soft: #33224d;
+  --text: #ece7f6;
+  --text-dim: #a297bf;
+  --text-faint: #695a83;
 
-  --cyan: #4adede;
-  --magenta: #ff6ad5;
-  --amber: #ffb454;
+  --cyan: #a78bfa;
+  --magenta: #c026d3;
+  --amber: #e0aaff;
   --green: #7ee787;
   --red: #ff6b6b;
+  --violet: #8b5cf6;
+  --violet-deep: #4c1d95;
 
-  --grad-signature: linear-gradient(120deg, var(--cyan), var(--magenta));
+  --grad-signature: linear-gradient(120deg, #c084fc, #6d28d9);
 
   /* Typo */
   --font-display: 'JetBrains Mono', 'Fira Code', monospace;
@@ -35,9 +37,9 @@
   --radius-lg: 18px;
   --gutter: clamp(20px, 5vw, 64px);
 
-  --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
-  --shadow-glow-cyan: 0 0 40px -10px rgba(74, 222, 222, 0.35);
-  --shadow-glow-magenta: 0 0 40px -10px rgba(255, 106, 213, 0.35);
+  --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.75);
+  --shadow-glow-cyan: 0 0 40px -8px rgba(167, 139, 250, 0.45);
+  --shadow-glow-magenta: 0 0 40px -8px rgba(192, 38, 212, 0.4);
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -123,7 +125,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .cursor-ring.is-active {
   width: 52px; height: 52px;
   border-color: var(--cyan);
-  background: rgba(74, 222, 222, 0.08);
+  background: rgba(167, 139, 250, 0.1);
 }
 @media (hover: none), (pointer: coarse) {
   .cursor-dot, .cursor-ring { display: none; }
@@ -295,12 +297,104 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   opacity: 0.9;
 }
 
-.hero-inner {
+.hero-grid {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 28px;
-  max-width: 760px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+@media (max-width: 880px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+
+.hero-inner {
+  display: grid;
+  gap: 26px;
+}
+
+/* ------------------------- Visuel photo + badges ------------------------ */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+}
+@media (max-width: 880px) {
+  .hero-visual { order: -1; min-height: 300px; margin-bottom: 8px; }
+}
+
+.hero-photo-card {
+  position: relative;
+  width: min(340px, 78vw);
+  aspect-ratio: 4 / 4.7;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  background: var(--bg-elevated);
+  z-index: 2;
+}
+.hero-photo-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 30px;
+  background: var(--grad-signature);
+  opacity: 0.55;
+  filter: blur(18px);
+}
+.hero-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+.hero-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(200deg, transparent 55%, rgba(6,3,9,0.75) 100%);
+  pointer-events: none;
+}
+
+.floating-badge {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(15, 10, 25, 0.75);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--text-dim);
+  animation: floaty 4.5s ease-in-out infinite;
+}
+.floating-badge b { color: var(--text); font-weight: 600; }
+.badge-ico { font-size: 18px; line-height: 1; flex-shrink: 0; }
+
+.badge-1 { top: 4%; left: -6%; animation-delay: 0s; }
+.badge-2 { bottom: 12%; right: -8%; animation-delay: 1.2s; }
+.badge-3 { bottom: -4%; left: 6%; animation-delay: 2.4s; }
+@media (max-width: 880px) {
+  .badge-1 { left: -2%; }
+  .badge-2 { right: -2%; }
+  .badge-3 { left: 2%; }
+}
+@media (max-width: 480px) {
+  .floating-badge { font-size: 10.5px; padding: 8px 11px; }
+  .badge-1 { top: 0%; left: -2%; }
+  .badge-2 { bottom: 8%; right: -2%; }
+  .badge-3 { display: none; }
 }
 
 .eyebrow {
@@ -389,6 +483,46 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .scroll-hint .line { width: 1px; height: 26px; background: linear-gradient(var(--text-faint), transparent); }
 @keyframes floaty { 0%,100%{ transform: translate(-50%,0);} 50%{ transform: translate(-50%,6px);} }
+
+/* ==========================================================================
+   BANDE DE CHIFFRES CLÉS (accueil)
+   ========================================================================== */
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+@media (max-width: 720px) {
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  text-align: center;
+  padding: 26px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+}
+.stat-card:hover { border-color: var(--violet); transform: translateY(-3px); }
+
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  font-weight: 800;
+  background: var(--grad-signature);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
 
 /* ==========================================================================
    SECTIONS GÉNÉRIQUES
@@ -542,6 +676,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: color .2s, border-color .2s;
 }
 .project-links a:hover { color: var(--cyan); border-color: var(--cyan); }
+.project-links span {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--text-faint);
+}
 
 /* ==========================================================================
    FILTRES (page projets)
@@ -601,6 +740,60 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 34px;
   z-index: -1;
 }
+
+.avatar-photo {
+  width: 200px; height: 200px;
+  border-radius: 28px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+.avatar-photo::before {
+  content: "";
+  position: absolute; inset: -2px; z-index: -1;
+  border-radius: 30px;
+  background: var(--grad-signature);
+  opacity: 0.5;
+  filter: blur(16px);
+}
+.avatar-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   SPORT / ACHIEVEMENTS (à propos)
+   ========================================================================== */
+
+.sport-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  padding: 32px clamp(20px, 4vw, 40px);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  background: var(--bg-elevated-2);
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+}
+.achievement-card:hover { border-color: var(--violet); transform: translateY(-3px); }
+.achievement-ico { font-size: 26px; line-height: 1; flex-shrink: 0; }
+.achievement-card h4 { font-size: 0.95rem; margin-bottom: 4px; }
+.achievement-card p { color: var(--text-dim); font-size: 0.85rem; }
 
 .skills-grid {
   display: grid;

@@ -223,7 +223,7 @@ function initScene(canvasId, opts = {}) {
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
   const pointMaterial = new THREE.PointsMaterial({
-    color: 0x4adede,
+    color: 0xa78bfa,
     size: ambient ? 0.09 : 0.14,
     transparent: true,
     opacity: ambient ? 0.55 : 0.85,
@@ -233,7 +233,7 @@ function initScene(canvasId, opts = {}) {
 
   // Lignes reliant les nœuds proches (recalculées périodiquement, pas chaque frame)
   const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0xff6ad5,
+    color: 0xc026d3,
     transparent: true,
     opacity: ambient ? 0.12 : 0.2,
   });
@@ -269,7 +269,7 @@ function initScene(canvasId, opts = {}) {
   if (!ambient) {
     const icoGeo = new THREE.IcosahedronGeometry(5.4, 1);
     const icoMat = new THREE.MeshBasicMaterial({
-      color: 0xffb454,
+      color: 0x8b5cf6,
       wireframe: true,
       transparent: true,
       opacity: 0.22,

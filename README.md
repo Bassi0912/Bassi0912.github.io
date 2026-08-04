@@ -16,13 +16,15 @@ portfolio/
 ├── css/style.css       # Tout le design (variables, layout, responsive)
 ├── js/main.js           # Curseur custom, scroll reveal, tilt 3D, scène Three.js
 ├── assets/
-│   └── cv-camille-dubois.pdf   # CV placeholder — à remplacer par le vôtre
+│   ├── cv-bassirou-gueye.pdf   # CV téléchargeable
+│   └── bassirou-gueye.jpg      # Photo de profil
 └── README.md
 ```
 
 ## 1. Personnaliser le contenu
 
-Le site est livré avec un profil d'exemple ("Camille Dubois") à remplacer par le vôtre.
+Le site est livré avec le profil de Bassirou Gueye. Pour le personnaliser à nouveau,
+remplacez le texte, la photo (`assets/`) et le CV par les vôtres.
 
 - **Nom, titre, texte de présentation** : à modifier directement dans `index.html`
   (section `.hero`) et `about.html` (section `.about-hero`).
@@ -40,14 +42,14 @@ Le site est livré avec un profil d'exemple ("Camille Dubois") à remplacer par 
   définit le pourcentage affiché.
 - **Parcours** (`about.html`) : chaque étape est un `.timeline-item`, dupliquez pour
   ajouter une expérience ou une formation.
-- **CV** : remplacez `assets/cv-camille-dubois.pdf` par votre propre PDF (gardez le
+- **CV** : remplacez `assets/cv-bassirou-gueye.pdf` par votre propre PDF (gardez le
   même nom de fichier, ou mettez à jour les 3 liens `href="assets/..."` si vous le
   renommez).
-- **Liens de contact** : email, GitHub, LinkedIn sont à changer dans `index.html`
+- **Liens de contact** : email, téléphone, etc. sont à changer dans `index.html`
   (section `#contact`) et dans le pied de page (`<footer>`) de chaque page.
 - **Couleurs** : tout le thème est piloté par les variables CSS en haut de
   `css/style.css` (bloc `:root`) — changez `--cyan`, `--magenta`, `--amber`, `--bg`,
-  etc. pour une palette différente.
+  etc. pour une palette différente (thème actuel : noir + violet foncé).
 
 > Le formulaire de contact est statique (aucun serveur) : pour qu'il envoie vraiment
 > des emails, connectez-le à un service comme Formspree, EmailJS ou Netlify Forms.

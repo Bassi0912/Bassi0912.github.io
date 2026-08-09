@@ -1,0 +1,39 @@
+<?php
+include 'logique.php'; // Inclure la logique du jeu
+
+class Instructions {
+    public function display() {
+        echo '<!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Consignes du Jeu</title>
+            <link rel="stylesheet" href="../styles.css">
+        </head>
+        <body class="instructions-page"> 
+            <div class="instructions-container">
+                <h1>Consignes du Jeu</h1>
+                <p>Bienvenue dans le jeu "Deviner le Personnage" ! Voici comment jouer :</p>
+                <ul>
+                    Vous partez avec 100 points à votre actif</br>
+                    Chaque tentative vous coûte 5 points</br>
+                    Faites dans un premier temps une première tentative.</br>
+                    Essayez de deviner ses caractéristiques (arme, taille, type, statut)</br>
+                    Si vous trouvez le bon personnage, vous recevrez un message de succès !</br>
+                    Vous obtiendrez votre nombre de tentatives</br>
+                    Vous obtiendrez également un nombre de points en fonction de vos tentatives</br>
+                    Vous pouvez recommencer le jeu à tout moment.</br>
+                    Bon courage!
+                </ul>
+                <a href="../index.php" class="button">Retourner au Jeu</a>
+            </div>
+        </body>
+        </html>';
+    }
+}
+
+// Instanciation de la classe et affichage des consignes
+$instructions = new Instructions();
+$instructions->display();
+?>

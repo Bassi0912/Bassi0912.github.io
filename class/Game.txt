@@ -1,0 +1,60 @@
+<?php
+class Game {
+    private $conn;
+    private $personnage;
+    private $tentatives = [];
+
+    public function __construct($conn) {
+        $this->conn = $conn;
+        $this->personnage = Personnage::getRandomPersonnage($conn);
+    }
+
+    // Ajoute une tentative à la liste des tentatives
+    public function addTentative($nom) {
+        $tentative = Personnage::getPersonnageByName($this->conn, $nom);
+        if ($tentative) {
+            $this->tentatives[] = $tentative;
+        }
+    }
+
+    // Vérifie si la tentative est correcte
+    private function checkMatch($tentative) {
+        $correct = true;
+        $personnage = $this->personnage;
+        
+        // Comparaison des caractéristiques
+        if ($personnage->arme !== $tentative->arme) {
+            $correct = false;
+        } elseif ($personnage->taille !== $tentative->taille) {
+            $correct = false;
+        } elseif ($personnage->type !== $tentative->type) {
+            $correct = false;
+        } elseif ($personnage->statut !== $tentative->statut) {
+            $correct = false;
+        }
+        
+        return $correct;
+    }
+
+    // Retourne l'image du personnage à deviner
+    public function getPersonnage() {
+        return $this->personnage;
+    }
+
+    // Retourne les tentatives
+    public function getTentatives() {
+        return $this->tentatives;
+    }
+
+    // Vérifie si la partie est gagnée
+    public function isGameWon() {
+        foreach ($this->tentatives as $tentative) {
+            if ($this->checkMatch($tentative)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+?>

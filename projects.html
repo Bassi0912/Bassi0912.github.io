@@ -33,7 +33,7 @@
   <p class="breadcrumb">accueil<span class="sep">/</span><span class="current">projets</span></p>
   <p class="section-label">portfolio complet</p>
   <h2 style="font-family:var(--font-display); font-size:clamp(1.8rem,4.5vw,3rem); margin-top:8px;">Tous mes projets</h2>
-  <p class="section-sub">Une sélection de projets personnels réalisés au fil de ma formation — sites vitrine, portfolio et jeu interactif.</p>
+  <p class="section-sub">Une sélection de projets personnels réalisés au fil de ma formation — sites vitrine, portfolio, jeu interactif, application de data visualisation et prototype UX.</p>
 </div>
 
 <section class="section section-tight">
@@ -44,6 +44,7 @@
       <button class="filter-btn" data-filter="front">Front-end</button>
       <button class="filter-btn" data-filter="webflow">Webflow</button>
       <button class="filter-btn" data-filter="data">Base de données</button>
+      <button class="filter-btn" data-filter="ux">UX / Figma</button>
     </div>
 
     <div class="grid-projects reveal-stagger">
@@ -51,14 +52,17 @@
       <article class="project-card" data-tech="front">
         <div class="project-card-inner">
           <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#c084fc,#3b0764);"></div>
+            <div class="thumb-bg" style="background-image:url('assets/img/site-manga.png'); background-position:top center;"></div>
             <span class="thumb-tag">Site vitrine</span>
           </div>
           <div class="project-body">
-            <h3>Site de présentation d'un manga</h3>
-            <p>Création d'un site pour présenter un manga, avec des sections dédiées aux personnages et à l'intrigue.</p>
-            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            <div class="project-links"><span>Septembre 2024</span></div>
+            <h3>Site de présentation d'un manga — Vagabond</h3>
+            <p>Site créé durant ma 1ère année de BUT MMI pour présenter le manga "Vagabond" : maquette, mise en page et déclinaison en GIF animé (Photoshop), puis mise en ligne via Jimdo.</p>
+            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Jimdo</li></ul>
+            <div class="project-links">
+              <a href="https://vagabond10.jimdofree.com/" target="_blank" rel="noopener">Voir le site ↗</a>
+              <span>Septembre 2024</span>
+            </div>
           </div>
         </div>
       </article>
@@ -66,14 +70,17 @@
       <article class="project-card" data-tech="webflow">
         <div class="project-card-inner">
           <div class="project-thumb">
-            <div class="thumb-bg" style="background:linear-gradient(135deg,#a78bfa,#1e1033);"></div>
+            <div class="thumb-bg" style="background-image:url('assets/img/portfolio-webflow.png'); background-position:top center;"></div>
             <span class="thumb-tag">Portfolio</span>
           </div>
           <div class="project-body">
             <h3>Portfolio Webflow</h3>
-            <p>Développement d'un portfolio interactif en ligne pour présenter mes projets et mon parcours.</p>
+            <p>Développement d'un portfolio interactif en ligne pour présenter mes projets et mon parcours, entièrement construit sur Webflow.</p>
             <ul class="tech-list"><li>Webflow</li></ul>
-            <div class="project-links"><span>Juin 2024</span></div>
+            <div class="project-links">
+              <a href="https://preview.webflow.com/preview/bassirous-dapper-site?utm_medium=preview_link&utm_source=dashboard&utm_content=bassirous-dapper-site&preview=938e92f26fb1480f69d368ff62f697a0&locale=en&workflow=sitePreview" target="_blank" rel="noopener">Voir le site ↗</a>
+              <span>Juin 2024</span>
+            </div>
           </div>
         </div>
       </article>
@@ -89,6 +96,40 @@
             <p>Création d'un jeu de devinettes interactif sur des personnages célèbres, avec base de données pour les indices et les réponses.</p>
             <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li></ul>
             <div class="project-links"><span>Décembre 2024</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-tech="front,data">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background-image:url('assets/img/carte-departements.png'); background-position:center;"></div>
+            <span class="thumb-tag">Web App</span>
+          </div>
+          <div class="project-body">
+            <h3>Carte interactive des départements français</h3>
+            <p>Application web présentant une carte de France cliquable département par département, avec visualisation de données démographiques (habitat, transport, répartition hommes/femmes) sous forme de graphiques dynamiques.</p>
+            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links">
+              <a href="https://bisque-chimpanzee-115169.hostingersite.com/" target="_blank" rel="noopener">Voir la démo ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-tech="ux">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background-image:url('assets/img/site-ishiki.png'); background-position:center;"></div>
+            <span class="thumb-tag">Prototype UX</span>
+          </div>
+          <div class="project-body">
+            <h3>Ishiki — Plateforme de formation en ligne</h3>
+            <p>Projet de groupe : conception d'un site de formation en ligne (langues, grammaire) entièrement maquetté et rendu interactif sur Figma, sans code — navigation, liens et boutons fonctionnels simulant un vrai site.</p>
+            <ul class="tech-list"><li>Figma</li><li>Prototypage</li><li>UX/UI</li></ul>
+            <div class="project-links">
+              <a href="https://www.figma.com/design/pQ4OcJUzVmbjfSlb4r1AOw/Benchmark-et-inspirations-portfolio-Bassirou-Gueye?node-id=4-2&t=YCbDn9pNikYZqzDy-1" target="_blank" rel="noopener">Voir sur Figma ↗</a>
+            </div>
           </div>
         </div>
       </article>

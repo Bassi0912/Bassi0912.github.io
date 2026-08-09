@@ -147,6 +147,79 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
   tick();
 })();
 
+/* ------------------------------ Modale projet ---------------------------- */
+(function initProjectModal() {
+  const modal = document.getElementById('project-modal');
+  const cards = document.querySelectorAll('.project-card');
+  if (!modal || !cards.length) return;
+
+  const mediaEl = modal.querySelector('.project-modal-media');
+  const tagEl = modal.querySelector('#modal-tag');
+  const titleEl = modal.querySelector('#modal-title');
+  const descEl = modal.querySelector('#modal-desc');
+  const techEl = modal.querySelector('#modal-tech');
+  const linksEl = modal.querySelector('#modal-links');
+  let lastFocused = null;
+
+  function openFromCard(card) {
+    const thumbBg = card.querySelector('.thumb-bg');
+    const bgImage = thumbBg ? getComputedStyle(thumbBg).backgroundImage : 'none';
+    mediaEl.style.backgroundImage = bgImage;
+
+    const tag = card.querySelector('.thumb-tag')?.textContent.trim() || '';
+    tagEl.textContent = tag;
+    tagEl.style.display = tag ? '' : 'none';
+
+    titleEl.textContent = card.querySelector('h3')?.textContent.trim() || '';
+    descEl.textContent = card.querySelector('.project-body > p')?.textContent.trim() || '';
+
+    const techItems = Array.from(card.querySelectorAll('.tech-list li')).map(li => li.textContent.trim());
+    techEl.innerHTML = techItems.map(t => `<li>${t}</li>`).join('');
+
+    const links = Array.from(card.querySelectorAll('.project-links a'));
+    const dateSpan = card.querySelector('.project-links span');
+    let linksHtml = links.map(a => `<a href="${a.getAttribute('href')}" target="_blank" rel="noopener">${a.textContent.trim()}</a>`).join('');
+    if (dateSpan) linksHtml += `<span>${dateSpan.textContent.trim()}</span>`;
+    linksEl.innerHTML = linksHtml;
+
+    lastFocused = document.activeElement;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.project-modal-close').focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  cards.forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-haspopup', 'dialog');
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // laisse les liens s'ouvrir normalement
+      openFromCard(card);
+    });
+    card.addEventListener('keydown', (e) => {
+      if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('a')) {
+        e.preventDefault();
+        openFromCard(card);
+      }
+    });
+  });
+
+  modal.querySelectorAll('[data-modal-close]').forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+
 /* -------------------------------- Filtres -------------------------------- */
 (function initFilters() {
   const buttons = document.querySelectorAll('.filter-btn');

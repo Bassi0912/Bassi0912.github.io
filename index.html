@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bassirou Gueye — Développeur Web</title>
+<meta name="description" content="Portfolio de Bassirou Gueye, développeur web à la recherche d'une alternance. Projets, compétences et CV.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌘</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============================= NAVIGATION ============================= -->
+<header class="editor-chrome">
+  <div class="chrome-titlebar">
+    <div class="chrome-dots"><span></span><span></span><span></span></div>
+    <span class="chrome-path">~/portfolio/bassirou-gueye</span>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="tabs" aria-label="Navigation principale">
+      <a class="tab" href="index.html" aria-current="page"><span class="dot"></span>index.html</a>
+      <a class="tab" href="projects.html"><span class="dot"></span>projects.html</a>
+      <a class="tab" href="about.html"><span class="dot"></span>about.html</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================================ HERO ================================= -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="container hero-grid">
+
+    <div class="hero-inner">
+      <p class="eyebrow">disponible pour une alternance dès 2026</p>
+      <h1>Bassirou Gueye<br><span class="grad">Développeur Web</span></h1>
+      <p class="hero-terminal">
+        <span class="prompt">$</span><span data-typing='["whoami → développeur web junior", "formation → BUT MMI · Master IA à venir", "stack → HTML · CSS · JavaScript · MySQL", "status → recherche une alternance"]'></span><span class="caret"></span>
+      </p>
+      <p class="lede">
+        Diplômé d'un BUT Métiers du Multimédia et de l'Internet et admis en Master Ingénierie des données
+        et Intelligence Artificielle à l'Université Paris 8, je cherche une alternance pour mettre mes
+        compétences au service de projets concrets — du développement web au traitement des données.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="projects.html">Voir mes projets</a>
+        <a class="btn btn-ghost" href="assets/cv-bassirou-gueye.pdf" download>Télécharger le CV ↓</a>
+      </div>
+      <div class="hero-stack">
+        <span class="stack-chip">HTML</span>
+        <span class="stack-chip">CSS</span>
+        <span class="stack-chip">JavaScript</span>
+        <span class="stack-chip">MySQL</span>
+        <span class="stack-chip">Docker</span>
+        <span class="stack-chip">Dart</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo-card">
+        <img src="assets/bassirou-gueye.jpg" alt="Photo de Bassirou Gueye">
+      </div>
+      <div class="floating-badge badge-1"><span class="badge-ico">🎓</span><span>BUT MMI<br><b>2023 — 2026</b></span></div>
+      <div class="floating-badge badge-2"><span class="badge-ico">🏆</span><span>Saut en hauteur<br><b>2m05 · niveau national</b></span></div>
+      <div class="floating-badge badge-3"><span class="badge-ico">📍</span><span>Bobigny 93000</span></div>
+    </div>
+
+  </div>
+  <div class="scroll-hint"><span>scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============================== QUICK FACTS ============================= -->
+<section class="section section-tight">
+  <div class="container">
+    <div class="stats-strip reveal-stagger">
+      <div class="stat-card">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Stages en développement web</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Projets web personnels</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">2m05</span>
+        <span class="stat-label">Record en saut en hauteur</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Langues parlées</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROJETS PHARES ============================ -->
+<section class="section" id="projets">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label">projets sélectionnés</p>
+        <h2>Ce que j'ai construit récemment</h2>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="projects.html">Tous les projets →</a>
+    </div>
+
+    <div class="grid-projects reveal-stagger">
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background-image:url('assets/img/site-manga.png'); background-position:top center;"></div>
+            <span class="thumb-tag">Site vitrine</span>
+          </div>
+          <div class="project-body">
+            <h3>Site de présentation d'un manga</h3>
+            <p>Site vitrine pour présenter le manga Vagabond, personnages et intrigue inclus.</p>
+            <span class="project-cta">Cliquer pour voir le détail</span>
+            <div class="project-detail" hidden>
+              <p>Site créé durant ma 1ère année de BUT MMI pour présenter le manga "Vagabond" : maquette, mise en page et déclinaison en GIF animé (Photoshop), puis mise en ligne via Jimdo.</p>
+              <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-links">
+                <a href="https://vagabond10.jimdofree.com/" target="_blank" rel="noopener">Voir le site ↗</a>
+                <span>Septembre 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background-image:url('assets/img/portfolio-webflow.png'); background-position:top center;"></div>
+            <span class="thumb-tag">Portfolio</span>
+          </div>
+          <div class="project-body">
+            <h3>Portfolio Webflow</h3>
+            <p>Mon portfolio personnel construit de A à Z sur Webflow.</p>
+            <span class="project-cta">Cliquer pour voir le détail</span>
+            <div class="project-detail" hidden>
+              <p>Développement d'un portfolio interactif en ligne pour présenter mes projets, entièrement construit sur Webflow.</p>
+              <ul class="tech-list"><li>Webflow</li></ul>
+              <div class="project-links">
+                <a href="https://preview.webflow.com/preview/bassirous-dapper-site?utm_medium=preview_link&utm_source=dashboard&utm_content=bassirous-dapper-site&preview=938e92f26fb1480f69d368ff62f697a0&locale=en&workflow=sitePreview" target="_blank" rel="noopener">Voir le site ↗</a>
+                <span>Juin 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="thumb-bg" style="background-image:url('assets/img/jeu-dle.png'); background-position:center;"></div>
+            <span class="thumb-tag">Jeu web</span>
+          </div>
+          <div class="project-body">
+            <h3>Jeu DLE — Devinette de Personnages</h3>
+            <p>Devinez un personnage à ses caractéristiques, façon Wordle, sur l'univers d'Elden Ring.</p>
+            <span class="project-cta">Cliquer pour voir le détail</span>
+            <div class="project-detail" hidden>
+              <p>Création d'un jeu de devinettes interactif inspiré d'Elden Ring : on entre le nom d'un personnage et le jeu compare ses caractéristiques (arme, taille, type, statut) à celles du personnage à trouver, avec une base de données pour gérer les indices et les réponses.</p>
+              <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li></ul>
+              <div class="project-links"><span>Décembre 2024</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== À PROPOS TEASER ========================== -->
+<section class="section section-tight">
+  <div class="container">
+    <div class="cv-panel reveal">
+      <div>
+        <h3>Envie d'en savoir plus sur mon parcours ?</h3>
+        <p>Formation, stages, compétences détaillées et CV téléchargeable sur la page à propos.</p>
+      </div>
+      <a class="btn btn-primary" href="about.html">Voir mon profil →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ CONTACT ================================ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label">contact</p>
+        <h2>Discutons de votre projet</h2>
+      </div>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:bassdu28@gmail.com">
+          <span class="ico">✉</span>
+          <span><strong>Email</strong><span>bassdu28@gmail.com</span></span>
+        </a>
+        <a class="contact-link" href="tel:+33761804256">
+          <span class="ico">☎</span>
+          <span><strong>Téléphone</strong><span>07.61.80.42.56</span></span>
+        </a>
+        <a class="contact-link" href="#" onclick="return false;">
+          <span class="ico">📍</span>
+          <span><strong>Localisation</strong><span>Bobigny 93000</span></span>
+        </a>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-field">
+          <label for="name">Nom</label>
+          <input id="name" type="text" placeholder="Votre nom">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="vous@exemple.com">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Parlez-moi de votre projet…"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span data-year></span> Bassirou Gueye — conçu &amp; développé à la main.</p>
+    <div class="footer-social">
+      <a href="mailto:bassdu28@gmail.com" aria-label="Email">Email</a>
+      <a href="tel:+33761804256" aria-label="Téléphone">Téléphone</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ MODALE PROJET ============================ -->
+<div class="project-modal" id="project-modal" aria-hidden="true">
+  <div class="project-modal-backdrop" data-modal-close></div>
+  <div class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="project-modal-close" data-modal-close aria-label="Fermer">✕</button>
+    <div class="project-modal-media"></div>
+    <div class="project-modal-body">
+      <span class="thumb-tag" id="modal-tag"></span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <ul class="tech-list" id="modal-tech"></ul>
+      <div class="project-links" id="modal-links"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
